@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct ButtonWBView: View {
+    let title: String
+    let action: ()->()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action:action) {
+            Text(title)
+                .font(.system(size: 16))
+                .foregroundStyle(.white)
+                .padding()
+        .frame(maxWidth: .infinity)
+        .background(.wbButton)
+        .clipShape(Capsule())
+        }
+        .padding(.horizontal, 24)
+        .padding(.bottom, 40)
     }
 }
 
 #Preview {
-    ButtonWBView()
+    ButtonWBView(title: "button", action: {})
 }

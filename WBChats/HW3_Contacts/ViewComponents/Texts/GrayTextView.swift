@@ -14,6 +14,8 @@ struct GrayTextView: View {
             .font(.system(size: 12))
             .foregroundStyle(.gray)
     }
+}
+
 
 #Preview {
     GrayTextView(text: "text")

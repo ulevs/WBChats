@@ -8,10 +8,39 @@
 import SwiftUI
 
 struct ContactsView: View {
+    @State private var tabSelected = 1
+    @State private var searchText = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            NavigationBarView(title: "Контакты", backButton: true)
+            ContactsRows()
+//            CustomTabBarView(tabSelcted: $tabSelected)
+//                .navigationTitle("Контакты")
+//                .toolbar {
+//                    ToolbarItem(placement: .navigationBarLeading) {
+//                        TitleView(title: "Контакты")
+//                    }
+//                    ToolbarItem(placement: .navigationBarTrailing) {
+//                        Button(action: {
+//                        }) {
+//                            Image(systemName: "plus")
+//                                .foregroundStyle(.wbHeadlineFont)
+//                        }
+//                    }}
+                .searchable(text: $searchText)
+                .toolbarRole(.navigationStack)
+//                .toolbarRole(.navigationStack) {
+//                    NavigationBarView(title: "Контакты", backButton: true)
+//                }
+        }
+      
+        
+      
+
     }
 }
+
+
 
 #Preview {
     ContactsView()

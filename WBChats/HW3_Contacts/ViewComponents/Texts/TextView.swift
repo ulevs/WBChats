@@ -14,7 +14,7 @@ struct TextView: View {
             .font(.system(size: 14))
             .fontWeight(.bold)
             .foregroundStyle(.wbHeadlineFont)
-//            .multilineTextAlignment(.leading)
+
     }
 }
 

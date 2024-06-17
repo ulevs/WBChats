@@ -7,25 +7,19 @@
 
 import SwiftUI
 
-struct ContactRows: View {
+struct ContactsRows: View {
     @State private var isPresented = false
     var body: some View {
         
         List(contacts) { contact in
 //            Button(action:{ isPresented.toggle() }) {
 //            NavigationLink(
-                HStack {
-                    AvatarView(person: contact)
-                    
-                    VStack(alignment: .leading) {
-                        TextView(text: contact.name + " " + (contact.surname ?? ""))
-                        
-                        GrayTextView(text: contact.isOnline ? "Online" : "Last seen \(contact.lastSeen)")
-                    }
-                    
-                    Spacer()
-                    
-                }
+            NavigationLink(destination: ProfileAccountView(person: contact)
+    
+            ) {
+                PersonRowView(person: contact)
+            }
+//            PersonRowView(person: contact)
                 .padding(.vertical, 4)
 //            }
 //            .sheet(isPresented: $isPresented) {
@@ -38,7 +32,7 @@ struct ContactRows: View {
     }
 }
 #Preview {
-    ContactRows()
+    ContactsRows()
 }
 
 
@@ -49,22 +43,11 @@ struct Contact: Identifiable {
     let surname: String?
     let imageName: String
     let phoneNumber: String
-//    let status: String
     let isOnline: Bool
     let lastSeen: String
     let hasUnwatchedStories: Bool
 //    let unreadMessages: Int?
 }
-//struct Contacts {
-//    let name: String
-//    let surname: String?
-//    let phoneNumber: String
-//    var lastSeen: Date?
-//    var isOnline: Bool
-//    var isStoryPublished: Bool
-////    var hasAvatar: Bool"
-//    var avatar: String?
-//}
 
 let contacts = [
     Contact(name: "Анастасия", surname: "Иванова", imageName: "person1", phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "yesterday", hasUnwatchedStories: false),
@@ -76,34 +59,3 @@ let contacts = [
 ]
 
 
-
-//
-//struct ContactRow: View {
-//    let contact: Contact
-//    
-//    var body: some View {
-////        NavigationStack {
-//            List(contacts) { contact in
-//                HStack {
-//                    
-//                    AvatarView(person: contact)
-//                    VStack(alignment: .leading) {
-//                        Text(contact.name + " " + (contact.surname ?? ""))
-//                            .font(.headline)
-//                        Text(contact.isOnline ? "Online" : "Last seen \(contact.lastSeen)")
-//                            .font(.subheadline)
-//                            .foregroundColor(contact.isOnline ? .green : .gray)
-//                    }
-//                    
-//                    Spacer()
-//                    
-//                }
-//                .padding(.vertical, 4)
-//            }
-//            .listStyle(.plain)
-//        }
-////    }
-//}
-////#Preview {
-////    ContactRow(contact: contacts.first!)
-////}

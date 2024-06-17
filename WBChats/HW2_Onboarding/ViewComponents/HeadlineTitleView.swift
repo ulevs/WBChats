@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeadlineTextView: View {
+struct HeadlineTitleView: View {
     let title: String
     var body: some View {
         Text(title)
@@ -19,5 +19,5 @@ struct HeadlineTextView: View {
 }
 
 #Preview {
-    HeadlineTextView(title: "text")
+    HeadlineTitleView(title: "text")
 }

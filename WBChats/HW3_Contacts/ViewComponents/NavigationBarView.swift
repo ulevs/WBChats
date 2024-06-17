@@ -7,12 +7,50 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct NavigationBarView: View {
+    
+    let title: String
+    let backButton: Bool
+    var rightButton: String? = nil
+    var rightButtonAction: (() -> Void)?
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            if backButton {
+                Button(action: {
+//                    DismissAction.self
+                }, label: {
+                    Image(systemName: "chevron.left")
+                        .bold()
+                        .foregroundStyle(Color.wbHeadlineFont)
+                })
+            }
+            
+          
+                TitleView(title: title)
+            
+            
+            Spacer()
+            
+            if let rightButton = rightButton {
+                Button(action: {
+                    rightButtonAction?()
+                }, label: {
+                    Image(systemName: rightButton)
+                        .bold()
+                        .foregroundStyle(Color.wbHeadlineFont)
+                })
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 14)
+       
     }
 }
 
 #Preview {
-    NavigationBarView()
+    NavigationBarView(title: "Контакты", backButton: true)
 }

@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct PersonRowView: View {
+    let person: Contact
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            AvatarView(person: person)
+            
+            VStack(alignment: .leading) {
+                TextView(text: person.name + " " + (person.surname ?? ""))
+                GrayTextView(text: person.isOnline ? "Online" : "Last seen \(person.lastSeen)")
+            }
+            Spacer()
+        }
     }
 }
 
 #Preview {
-    PersonRowView()
+    PersonRowView(person: Contact(name: "Анастасия", surname: "Иванова", imageName: "person1", phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "yesterday", hasUnwatchedStories: false))
 }

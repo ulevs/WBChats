@@ -18,7 +18,7 @@ struct WalkthroughView: View {
                 .frame(width: 262, height: 271)
                 .padding(.top, 135)
             
-            HeadlineTextView(title: "Общайтесь с друзьями и близкими легко")
+            HeadlineTitleView(title: "Общайтесь с друзьями и близкими легко")
                 .padding(.top, 42)
             
             Spacer()
@@ -34,7 +34,7 @@ struct WalkthroughView: View {
                     }
                 
                 Text(" и ")
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.gray)
                     .font(.system(size: 10))
                 
                 TextButton(isPresented: $showTermsOfUse, title: "Условиями Использования")
@@ -51,7 +51,7 @@ struct WalkthroughView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WalkthroughView()
     }
 }
 
