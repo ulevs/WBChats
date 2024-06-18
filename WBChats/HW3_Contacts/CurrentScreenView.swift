@@ -9,17 +9,30 @@ import SwiftUI
 
 struct CurrentScreenView: View {
     var body: some View {
-        TabView {
-            ContactsView()
-                .tag("contacts")
-                .tabItem {
-                    Image(systemName: "message")
-                }
-            ChatsView()
-                .tag("chats")
-            MoreView()
-                .tag("more")
-        }
+//        NavigationStack {
+            TabView {
+                ContactsView()
+                    .tag("contacts")
+                    .tabItem {
+                        Image("user")
+                            .foregroundStyle(.yellow)
+                    }
+                ChatsView()
+                    .tag("chats")
+                    .tabItem {
+                        Image("message")
+                    }
+                MoreView()
+                    .tag("more")
+                    .tabItem {
+                        Image("menu")
+                    }
+            }
+            
+//            .navigationTitle("Контакты")
+//           
+//        }
+        
     }
 }
 

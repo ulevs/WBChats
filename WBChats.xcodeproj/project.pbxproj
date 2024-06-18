@@ -25,6 +25,10 @@
 		AFA64D8E2C1F6D5600737DC8 /* GrayTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D8D2C1F6D5600737DC8 /* GrayTextView.swift */; };
 		AFA64D912C1F702600737DC8 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D902C1F702600737DC8 /* NavigationBarView.swift */; };
 		AFA64D932C20BF8200737DC8 /* DetailsAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D922C20BF8200737DC8 /* DetailsAvatarView.swift */; };
+		AFA64D952C20D64200737DC8 /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D942C20D64200737DC8 /* ChatsView.swift */; };
+		AFA64D972C20D65500737DC8 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D962C20D65500737DC8 /* MoreView.swift */; };
+		AFA64D9A2C20D72200737DC8 /* CurrentScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D992C20D72200737DC8 /* CurrentScreenView.swift */; };
+		AFA64D9C2C220C3100737DC8 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D9B2C220C3100737DC8 /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		AFA64D8D2C1F6D5600737DC8 /* GrayTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTextView.swift; sourceTree = "<group>"; };
 		AFA64D902C1F702600737DC8 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		AFA64D922C20BF8200737DC8 /* DetailsAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAvatarView.swift; sourceTree = "<group>"; };
+		AFA64D942C20D64200737DC8 /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
+		AFA64D962C20D65500737DC8 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		AFA64D992C20D72200737DC8 /* CurrentScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScreenView.swift; sourceTree = "<group>"; };
+		AFA64D9B2C220C3100737DC8 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +127,10 @@
 		AFA64D7D2C1A10AC00737DC8 /* HW3_Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				AFA64D992C20D72200737DC8 /* CurrentScreenView.swift */,
+				AFA64D9B2C220C3100737DC8 /* SearchBarView.swift */,
 				AFA64D7E2C1A164700737DC8 /* ViewComponents */,
-				AFA64D872C1DD31C00737DC8 /* ContactsView.swift */,
-				AFA64D892C1E318A00737DC8 /* ProfileAccountView.swift */,
+				AFA64D982C20D67200737DC8 /* Screens */,
 			);
 			path = HW3_Contacts;
 			sourceTree = "<group>";
@@ -147,6 +156,17 @@
 				AFA64D7F2C1A169B00737DC8 /* TitleView.swift */,
 			);
 			path = Texts;
+			sourceTree = "<group>";
+		};
+		AFA64D982C20D67200737DC8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AFA64D892C1E318A00737DC8 /* ProfileAccountView.swift */,
+				AFA64D872C1DD31C00737DC8 /* ContactsView.swift */,
+				AFA64D942C20D64200737DC8 /* ChatsView.swift */,
+				AFA64D962C20D65500737DC8 /* MoreView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,12 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA64D9C2C220C3100737DC8 /* SearchBarView.swift in Sources */,
 				AFA64D682C19DC8300737DC8 /* WalkthroughView.swift in Sources */,
+				AFA64D972C20D65500737DC8 /* MoreView.swift in Sources */,
 				AFA64D822C1A17E400737DC8 /* TextView.swift in Sources */,
 				AFA64D932C20BF8200737DC8 /* DetailsAvatarView.swift in Sources */,
 				AFA64D8E2C1F6D5600737DC8 /* GrayTextView.swift in Sources */,
+				AFA64D952C20D64200737DC8 /* ChatsView.swift in Sources */,
 				AFA64D842C1A1B2E00737DC8 /* ContactsRows.swift in Sources */,
 				AFA64D8C2C1F6A1800737DC8 /* PersonRowView.swift in Sources */,
+				AFA64D9A2C20D72200737DC8 /* CurrentScreenView.swift in Sources */,
 				AFA64D7A2C1A0E4D00737DC8 /* ModalPrivacyPolicyView.swift in Sources */,
 				AFA64D782C1A0DBD00737DC8 /* ButtonWBView.swift in Sources */,
 				AFA64D802C1A169B00737DC8 /* TitleView.swift in Sources */,

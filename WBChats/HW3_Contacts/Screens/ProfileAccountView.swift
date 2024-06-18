@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ProfileAccountView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+      
     let person: Contact
     var body: some View {
         VStack {
-            NavigationBarView(title: "Профиль", backButton: true)
-                .padding(.top)
+//            NavigationBarView(title: "Профиль", backButton: true)
+//                .padding(.top)
             DetailsAvatarView(person: person, radius: 200)
             
             HeadlineTitleView(title: person.name + " " + (person.surname ?? ""))
@@ -31,6 +33,58 @@ struct ProfileAccountView: View {
             
             
         }
+//        .navigationTitle("Профиль")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+                        leading: Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }) {
+                                Image(systemName: "chevron.left")
+                                .bold()
+                                .foregroundStyle(.wbHeadlineFont)
+    
+                        },
+                        trailing: Button(action: {
+                            // Действие для кнопки редактирования
+                        }) {
+                            Image(systemName: "pencil")
+//                                    .bold()
+                                .foregroundStyle(.wbHeadlineFont)
+                        }
+                    )
+        .navigationBarTitleDisplayMode(.automatic)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            TitleView(title: "Профиль")
+//                                .font(.headline)
+//                                .foregroundColor(Color.purple) // Цвет заголовка
+                        }
+                    }
+//        .toolbar {
+           
+            // Добавляем свою кнопку в навигационный бар
+//            ToolbarItem() {
+//                HStack {
+//                Button(action: {
+//                    // Действие для возврата назад
+//                    presentationMode.wrappedValue.dismiss()
+//                }) {
+//                    Image(systemName: "chevron.left") // Ваша иконка
+//                        .foregroundStyle(.wbHeadlineFont) // Цвет иконки
+//                }
+//                    
+//                    Text("Профиль")
+//                    Spacer()
+//                    Button(action: {
+//                        // Действие для возврата назад
+//                        presentationMode.wrappedValue.dismiss()
+//                    }) {
+//                        Image(systemName: "chevron.left") // Ваша иконка
+//                            .foregroundStyle(.wbHeadlineFont) // Цвет иконки
+//                    }
+//            }
+//        }
+//        }
     }
 }
 
