@@ -11,11 +11,14 @@ struct ContactsRows: View {
     
     var body: some View {
         List(MockData.contacts) { contact in
-            NavigationLink(destination: ProfileAccountView(person: contact)
-            ) {
+            ZStack {
                 PersonRowView(person: contact)
-            }
+                
+                NavigationLink(destination: ProfileAccountView(person: contact)
+                ) { }
+                .opacity(0)
                 .padding(.vertical, 4)
+            }
         }
         .listStyle(.plain)
     }
