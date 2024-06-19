@@ -12,6 +12,8 @@ struct AvatarView: View {
 
     var body: some View {
         ZStack {
+            StoryFrame()
+                .opacity(person.hasUnwatchedStories ? 100 : 0)
             
             switch person.imageName {
             case "none":
@@ -44,7 +46,7 @@ struct AvatarView: View {
 
 
 #Preview {
-    AvatarView(person: Contact(name: "Анастасия", surname: "Иванова", imageName: "person1", phoneNumber: "+7 999 999-99-99", isOnline: true, lastSeen: "yesterday", hasUnwatchedStories: false))
+    AvatarView(person: Contact(name: "Анастасия", surname: "Иванова", imageName: "person1", phoneNumber: "+7 999 999-99-99", isOnline: true, lastSeen: "yesterday", hasUnwatchedStories: true))
 }
 
 
@@ -52,3 +54,17 @@ struct AvatarView: View {
 
 
 
+
+struct StoryFrame: View {
+    let gradient = Gradient(colors: [.wbStart,  .wbEnd])
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 18)
+                .fill(LinearGradient(gradient: gradient, startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+                .frame(width: 56, height: 56)
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white)
+                .frame(width: 52, height: 52)
+        }
+    }
+}
