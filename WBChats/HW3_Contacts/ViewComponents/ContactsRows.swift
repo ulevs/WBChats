@@ -8,25 +8,14 @@
 import SwiftUI
 
 struct ContactsRows: View {
-    @State private var isPresented = false
-    var body: some View {
-        
-        List(contacts) { contact in
-//            Button(action:{ isPresented.toggle() }) {
-//            NavigationLink(
-            NavigationLink(destination: ProfileAccountView(person: contact)
     
+    var body: some View {
+        List(MockData.contacts) { contact in
+            NavigationLink(destination: ProfileAccountView(person: contact)
             ) {
                 PersonRowView(person: contact)
             }
-//            PersonRowView(person: contact)
                 .padding(.vertical, 4)
-//            }
-//            .sheet(isPresented: $isPresented) {
-//                ProfileAccountView(person: contact)
-//            }
-//                destination: ProfileAccountView(person: contact)
-//                )
         }
         .listStyle(.plain)
     }
@@ -34,28 +23,3 @@ struct ContactsRows: View {
 #Preview {
     ContactsRows()
 }
-
-
-
-struct Contact: Identifiable {
-    let id = UUID()
-    let name: String
-    let surname: String?
-    let imageName: String
-    let phoneNumber: String
-    let isOnline: Bool
-    let lastSeen: String
-    let hasUnwatchedStories: Bool
-//    let unreadMessages: Int?
-}
-
-let contacts = [
-    Contact(name: "Анастасия", surname: "Иванова", imageName: "person1", phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "yesterday", hasUnwatchedStories: false),
-    Contact(name: "Петя", surname: nil,  imageName: "person2", phoneNumber: "+7 999 999-99-99", isOnline: true, lastSeen: "", hasUnwatchedStories: false),
-    Contact(name: "Маман", surname: nil, imageName: "person3", phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "3 hours ago", hasUnwatchedStories: true),
-    Contact(name: "Арбуз", surname: "Дыня", imageName: "person4", phoneNumber: "+7 999 999-99-99", isOnline: true, lastSeen: "", hasUnwatchedStories: false),
-    Contact(name: "Иван", surname: "Иванов", imageName: "none", phoneNumber: "+7 999 999-99-99", isOnline: true, lastSeen: "", hasUnwatchedStories: false),
-    Contact(name: "Лиса", surname: "Алиса", imageName: "none", phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "30 minutes ago", hasUnwatchedStories: true)
-]
-
-

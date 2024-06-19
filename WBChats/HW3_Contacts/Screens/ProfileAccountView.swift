@@ -13,8 +13,6 @@ struct ProfileAccountView: View {
     let person: Contact
     var body: some View {
         VStack {
-//            NavigationBarView(title: "Профиль", backButton: true)
-//                .padding(.top)
             DetailsAvatarView(person: person, radius: 200)
             
             HeadlineTitleView(title: person.name + " " + (person.surname ?? ""))
@@ -24,16 +22,16 @@ struct ProfileAccountView: View {
                 .foregroundStyle(.gray)
             
             HStack {
-                SocialButton(iconName: "twitter", action: {})
-                SocialButton(iconName: "instagram", action: {})
-                SocialButton(iconName: "linkedin", action: {})
-                SocialButton(iconName: "facebook", action: {})
+                SocialButtonView(iconName: "twitter", action: {})
+                SocialButtonView(iconName: "instagram", action: {})
+                SocialButtonView(iconName: "linkedin", action: {})
+                SocialButtonView(iconName: "facebook", action: {})
             }
             .padding(.top, 40)
             
             
         }
-//        .navigationTitle("Профиль")
+        
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
                         leading: Button(action: {
@@ -44,11 +42,9 @@ struct ProfileAccountView: View {
                                 .foregroundStyle(.wbHeadlineFont)
     
                         },
-                        trailing: Button(action: {
-                            // Действие для кнопки редактирования
-                        }) {
+                        trailing: Button(action: {}) {
                             Image(systemName: "pencil")
-//                                    .bold()
+                                    .bold()
                                 .foregroundStyle(.wbHeadlineFont)
                         }
                     )
@@ -56,35 +52,8 @@ struct ProfileAccountView: View {
                     .toolbar {
                         ToolbarItem(placement: .principal) {
                             TitleView(title: "Профиль")
-//                                .font(.headline)
-//                                .foregroundColor(Color.purple) // Цвет заголовка
                         }
                     }
-//        .toolbar {
-           
-            // Добавляем свою кнопку в навигационный бар
-//            ToolbarItem() {
-//                HStack {
-//                Button(action: {
-//                    // Действие для возврата назад
-//                    presentationMode.wrappedValue.dismiss()
-//                }) {
-//                    Image(systemName: "chevron.left") // Ваша иконка
-//                        .foregroundStyle(.wbHeadlineFont) // Цвет иконки
-//                }
-//                    
-//                    Text("Профиль")
-//                    Spacer()
-//                    Button(action: {
-//                        // Действие для возврата назад
-//                        presentationMode.wrappedValue.dismiss()
-//                    }) {
-//                        Image(systemName: "chevron.left") // Ваша иконка
-//                            .foregroundStyle(.wbHeadlineFont) // Цвет иконки
-//                    }
-//            }
-//        }
-//        }
     }
 }
 
@@ -95,21 +64,4 @@ struct ProfileAccountView: View {
 
 
 
-struct SocialButton: View {
-    let iconName: String
-    let action: ()->()
-    
-    var body: some View {
-        Button(action: action) {
-            Image(iconName)
-                .padding()
-        }
-        .frame(height: 40)
-        .padding(.horizontal)
-        .clipShape(Capsule())
-        .overlay(
-            Capsule()
-                .stroke(Color.wbDefault, lineWidth: 2)
-        )
-    }
-}
+

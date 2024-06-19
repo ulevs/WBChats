@@ -8,31 +8,25 @@
 import SwiftUI
 
 struct CurrentScreenView: View {
+    @State private var searchText = ""
     var body: some View {
-//        NavigationStack {
-            TabView {
-                ContactsView()
-                    .tag("contacts")
-                    .tabItem {
-                        Image("user")
-                            .foregroundStyle(.yellow)
-                    }
-                ChatsView()
-                    .tag("chats")
-                    .tabItem {
-                        Image("message")
-                    }
-                MoreView()
-                    .tag("more")
-                    .tabItem {
-                        Image("menu")
-                    }
-            }
-            
-//            .navigationTitle("Контакты")
-//           
-//        }
-        
+        TabView {
+            ContactsView()
+                .tag("contacts")
+                .tabItem {
+                    Image("user")
+                }
+            ChatsView()
+                .tag("chats")
+                .tabItem {
+                    Image("message")
+                }
+            MoreView()
+                .tag("more")
+                .tabItem {
+                    Image("menu")
+                }
+        }
     }
 }
 
