@@ -97,6 +97,7 @@
 		AFC1D3022C2749BB00FF1DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFC1D3042C2749BB00FF1DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC1D3292C319C7600FF1DBB /* HW5_Bank.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HW5_Bank.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AFC1D32A2C3424FE00FF1DBB /* HW6_Factory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HW6_Factory.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +123,7 @@
 		AFA64D592C19DC8300737DC8 = {
 			isa = PBXGroup;
 			children = (
+				AFC1D32A2C3424FE00FF1DBB /* HW6_Factory.playground */,
 				AFC1D3292C319C7600FF1DBB /* HW5_Bank.playground */,
 				AFA64D642C19DC8300737DC8 /* WBChats */,
 				AFC1D2F92C2749B900FF1DBB /* HW4_Widget */,
