@@ -18,14 +18,15 @@ struct WalkthroughView: View {
                 .frame(width: 262, height: 271)
                 .padding(.top, 135)
             
-            HeadlineTitleView(title: "Общайтесь с друзьями и близкими легко")
+            HeadlineTitleView(title: "Communicate with friends and family easily")
                 .padding(.top, 42)
             
             Spacer()
             
-            Text("Нажимая кнопку продолжить я соглашаюсь с")
+            Text(NSLocalizedString("By clicking continue I agree to", comment: ""))
                 .font(.system(size: 10))
                 .foregroundStyle(.gray)
+
             
             HStack(spacing: 0) {
                 TextButton(isPresented: $showPrivacyPolicy, title: "Политикой Конфиденциальности")

@@ -10,7 +10,7 @@ import SwiftUI
 struct HeadlineTitleView: View {
     let title: String
     var body: some View {
-        Text(title)
+        Text(NSLocalizedString(title, comment: ""))
             .font(.system(size: 24))
             .fontWeight(.bold)
             .foregroundStyle(.wbHeadlineFont)

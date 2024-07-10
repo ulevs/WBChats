@@ -25,6 +25,7 @@ struct CurrentScreenView: View {
                 .tag("more")
                 .tabItem {
                     Image("menu")
+
                 }
         }
     }

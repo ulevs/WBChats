@@ -72,7 +72,7 @@ class Employee {
         self.passport = passport
         person.passport = passport
         passport.person = person
-        print("\(person.fullName) готов устроиться на завод чтобы изготавливать \(willDo.rawValue).")
+        print("\(person.fullName) готов устроиться на завод, чтобы изготавливать \(willDo.rawValue).")
     }
 
     deinit {
@@ -174,6 +174,11 @@ func example() {
     let customer1 = Customer(fullName: "Максим Васильев", age: 30, needsTo: .brick, quantity: 2.4, balance: 500.0)
 
     factory.addCustomer(customer: customer1)
+    worker1.workEightHours()
+    
+    factory.sellMaterials()
+    
+    worker1.workEightHours()
     worker1.workEightHours()
     
     factory.sellMaterials()
