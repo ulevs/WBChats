@@ -37,12 +37,14 @@
 		AFC1D3012C2749B900FF1DBB /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3002C2749B900FF1DBB /* AppIntent.swift */; };
 		AFC1D3032C2749BB00FF1DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC1D3022C2749BB00FF1DBB /* Assets.xcassets */; };
 		AFC1D3072C2749BB00FF1DBB /* HW4_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AFC1D2F32C2749B900FF1DBB /* HW4_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		AFC1D3412C398F5500FF1DBB /* WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3402C398F5400FF1DBB /* WidgetIntent.swift */; };
 		AFC1D3D22C3EF24F00FF1DBB /* ChatIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3D12C3EF24F00FF1DBB /* ChatIntent.swift */; };
 		AFC1D3D62C3EFA1600FF1DBB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFC1D3D82C3EFA1600FF1DBB /* Localizable.strings */; };
 		AFC1D3DB2C3EFD9500FF1DBB /* HW4_WidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3DA2C3EFD9500FF1DBB /* HW4_WidgetEntryView.swift */; };
 		AFC1D3E02C3F245300FF1DBB /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3DF2C3F245300FF1DBB /* CalendarView.swift */; };
 		AFC1D3E22C3F24BF00FF1DBB /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3E12C3F24BF00FF1DBB /* Language.swift */; };
+		AFC1D3E62C41983E00FF1DBB /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D9F2C2320DE00737DC8 /* ContactModel.swift */; };
+		AFC1D3E72C4198F400FF1DBB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D852C1A200600737DC8 /* AvatarView.swift */; };
+		AFC1D3E82C41991F00FF1DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA64D692C19DC8500737DC8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,11 +106,6 @@
 		AFC1D3042C2749BB00FF1DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC1D3292C319C7600FF1DBB /* HW5_Bank.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HW5_Bank.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AFC1D32A2C3424FE00FF1DBB /* HW6_Factory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HW6_Factory.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		AFC1D3332C35D74C00FF1DBB /* HW4__WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW4__WidgetBundle.swift; sourceTree = "<group>"; };
-		AFC1D3352C35D74C00FF1DBB /* HW4__Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW4__Widget.swift; sourceTree = "<group>"; };
-		AFC1D3372C35D74F00FF1DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AFC1D3392C35D74F00FF1DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFC1D3402C398F5400FF1DBB /* WidgetIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetIntent.swift; sourceTree = "<group>"; };
 		AFC1D3D12C3EF24F00FF1DBB /* ChatIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatIntent.swift; sourceTree = "<group>"; };
 		AFC1D3D72C3EFA1600FF1DBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AFC1D3DA2C3EFD9500FF1DBB /* HW4_WidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW4_WidgetEntryView.swift; sourceTree = "<group>"; };
@@ -146,7 +143,6 @@
 				AFC1D3292C319C7600FF1DBB /* HW5_Bank.playground */,
 				AFA64D642C19DC8300737DC8 /* WBChats */,
 				AFC1D2F92C2749B900FF1DBB /* HW4_Widget */,
-				AFC1D3322C35D74C00FF1DBB /* HW4__Widget */,
 				AFC1D2F42C2749B900FF1DBB /* Frameworks */,
 				AFA64D632C19DC8300737DC8 /* Products */,
 			);
@@ -270,18 +266,6 @@
 			path = HW4_Widget;
 			sourceTree = "<group>";
 		};
-		AFC1D3322C35D74C00FF1DBB /* HW4__Widget */ = {
-			isa = PBXGroup;
-			children = (
-				AFC1D3332C35D74C00FF1DBB /* HW4__WidgetBundle.swift */,
-				AFC1D3352C35D74C00FF1DBB /* HW4__Widget.swift */,
-				AFC1D3402C398F5400FF1DBB /* WidgetIntent.swift */,
-				AFC1D3372C35D74F00FF1DBB /* Assets.xcassets */,
-				AFC1D3392C35D74F00FF1DBB /* Info.plist */,
-			);
-			path = HW4__Widget;
-			sourceTree = "<group>";
-		};
 		AFC1D3D02C3EF1F700FF1DBB /* Intents */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC1D3E82C41991F00FF1DBB /* Assets.xcassets in Resources */,
 				AFC1D3032C2749BB00FF1DBB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +409,6 @@
 				AFA64DA02C2320DE00737DC8 /* ContactModel.swift in Sources */,
 				AFA64D7A2C1A0E4D00737DC8 /* ModalPrivacyPolicyView.swift in Sources */,
 				AFA64D782C1A0DBD00737DC8 /* ButtonWBView.swift in Sources */,
-				AFC1D3412C398F5500FF1DBB /* WidgetIntent.swift in Sources */,
 				AFA64D802C1A169B00737DC8 /* TitleView.swift in Sources */,
 				AFA64D762C1A0D9E00737DC8 /* HeadlineTitleView.swift in Sources */,
 				AFA64D862C1A200600737DC8 /* AvatarView.swift in Sources */,
@@ -443,6 +427,8 @@
 			files = (
 				AFC1D3DB2C3EFD9500FF1DBB /* HW4_WidgetEntryView.swift in Sources */,
 				AFC1D2FF2C2749B900FF1DBB /* HW4_Widget.swift in Sources */,
+				AFC1D3E72C4198F400FF1DBB /* AvatarView.swift in Sources */,
+				AFC1D3E62C41983E00FF1DBB /* ContactModel.swift in Sources */,
 				AFC1D3012C2749B900FF1DBB /* AppIntent.swift in Sources */,
 				AFC1D2FD2C2749B900FF1DBB /* HW4_WidgetLiveActivity.swift in Sources */,
 				AFC1D2FB2C2749B900FF1DBB /* HW4_WidgetBundle.swift in Sources */,

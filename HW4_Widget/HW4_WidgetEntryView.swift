@@ -8,23 +8,20 @@
 import Foundation
 import WidgetKit
 import SwiftUI
+import AppIntents
 
 struct HW4_WidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
         VStack {
-//            Text("Time:")
-//            Text(entry.date, style: .time)
-
             Text("Online now:")
-            Text(entry.configuration.favoriteEmoji)
+            Avatar(person: entry.contactShow[entry.index])
             
-            Button {
-                
-            } label: {
-                Text("next")
+            Button(intent: ChangeContactIntent(index: entry.index + 1)) {
+                Text("Next")
             }
         }
     }
 }
+

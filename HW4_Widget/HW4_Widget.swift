@@ -10,31 +10,22 @@ import SwiftUI
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
+        SimpleEntry(contactShow: MockData.shared.contacts, index: MockData.shared.index)
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+        SimpleEntry(contactShow: MockData.shared.contacts, index: MockData.shared.index)
     }
-    
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
-        return Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: [SimpleEntry(contactShow: MockData.shared.contacts, index: MockData.shared.index)], policy: .atEnd)
+        return timeline
     }
 }
 
 struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationAppIntent
+    var date: Date = .now
+    var contactShow: [Contact]
+    var index: Int
 }
 
 
@@ -50,23 +41,25 @@ struct HW4_Widget: Widget {
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
-        return intent
-    }
-    
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
-        return intent
-    }
-}
+//func whatIndex() -> Int {
+////    var index = MockData.shared.contacts
+//
+//    for i in 0...MockData.shared.contacts.count {
+//        guard MockData.shared.index < MockData.shared.contacts.count else {
+//            return 0
+//        }
+//        guard !MockData.shared.contacts[MockData.shared.index].isOnline else {
+//            return MockData.shared.index
+//        }
+//    }
+//    
+//    return MockData.shared.index
+//}
+
 
 #Preview(as: .systemSmall) {
     HW4_Widget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    SimpleEntry(contactShow: Array(MockData.shared.contacts), index: 0)
+    SimpleEntry(contactShow: Array(MockData.shared.contacts), index: 0)
 }

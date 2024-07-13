@@ -4,7 +4,6 @@
 //
 //  Created by Ульяна Евстигнеева on 12.06.2024.
 //
-
 import SwiftUI
 
 struct AvatarView: View {
@@ -14,30 +13,13 @@ struct AvatarView: View {
         ZStack {
             StoryFrame()
                 .opacity(person.hasUnwatchedStories ? 100 : 0)
-            
-            switch person.imageName {
-            case "none":
-                ZStack {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color.wbButton)
-                        .frame(width: 48, height: 48)
-                    Text((String(person.name.first ?? " ") + String(person.surname?.first ?? " ")))
-                            .foregroundStyle(.white)
-                            .bold()
-                }
-            default:
-                Image(person.imageName)
-                    .frame(width: 48, height: 48)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-            }
-            
-
-                Circle()
-                    .fill(Color.green)
-                    .frame(width: 12, height: 12)
-                    .overlay(Circle().stroke(.white, lineWidth: 2))
-                    .offset(x: 21, y: -21)
-                    .opacity(person.isOnline ? 100 : 0)
+            Avatar(person: person)
+            Circle()
+                .fill(Color.green)
+                .frame(width: 12, height: 12)
+                .overlay(Circle().stroke(.white, lineWidth: 2))
+                .offset(x: 21, y: -21)
+                .opacity(person.isOnline ? 100 : 0)
                     
 
         }
@@ -53,7 +35,26 @@ struct AvatarView: View {
 
 
 
-
+struct Avatar: View {
+    let person: Contact
+    var body: some View {
+        switch person.imageName {
+        case "none":
+            ZStack {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.wbButton)
+                    .frame(width: 48, height: 48)
+                Text((String(person.name.first ?? " ") + String(person.surname?.first ?? " ")))
+                        .foregroundStyle(.white)
+                        .bold()
+            }
+        default:
+            Image(person.imageName)
+                .frame(width: 48, height: 48)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+        }
+    }
+}
 
 struct StoryFrame: View {
     let gradient = Gradient(colors: [.wbStart,  .wbEnd])

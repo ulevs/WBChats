@@ -10,7 +10,7 @@ import SwiftUI
 struct ContactsRows: View {
     
     var body: some View {
-        List(MockData.contacts) { contact in
+        List(MockData.shared.contacts) { contact in
             ZStack {
                 PersonRowView(person: contact)
                 
