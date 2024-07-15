@@ -10,14 +10,14 @@ import SwiftUI
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(contactShow: MockData.shared.contacts, index: MockData.shared.index)
+        SimpleEntry(contactShow: MockData.shared.contacts, index: whatIndex(MockData.shared.index))
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(contactShow: MockData.shared.contacts, index: MockData.shared.index)
+        SimpleEntry(contactShow: MockData.shared.contacts, index: whatIndex(MockData.shared.index))
     }
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
-        let timeline = Timeline(entries: [SimpleEntry(contactShow: MockData.shared.contacts, index: MockData.shared.index)], policy: .atEnd)
+        let timeline = Timeline(entries: [SimpleEntry(contactShow: MockData.shared.contacts, index: whatIndex(MockData.shared.index))], policy: .atEnd)
         return timeline
     }
 }
@@ -41,20 +41,20 @@ struct HW4_Widget: Widget {
     }
 }
 
-//func whatIndex() -> Int {
-////    var index = MockData.shared.contacts
-//
-//    for i in 0...MockData.shared.contacts.count {
-//        guard MockData.shared.index < MockData.shared.contacts.count else {
-//            return 0
-//        }
-//        guard !MockData.shared.contacts[MockData.shared.index].isOnline else {
-//            return MockData.shared.index
-//        }
-//    }
-//    
-//    return MockData.shared.index
-//}
+func whatIndex(_ index: Int) -> Int {
+
+    for idx in index...MockData.shared.contacts.count {
+        guard idx <= (MockData.shared.contacts.count - 1) else {
+            return 0
+        }
+        
+        guard !MockData.shared.contacts[idx].isOnline else {
+            return idx
+        }
+    }
+    
+    return index
+}
 
 
 #Preview(as: .systemSmall) {
