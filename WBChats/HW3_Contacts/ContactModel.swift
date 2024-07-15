@@ -18,13 +18,10 @@ struct Contact: Identifiable {
     let isOnline: Bool
     let lastSeen: String
     let hasUnwatchedStories: Bool
-//    let unreadMessages: Int?
 }
 
-class MockData {
-    static let shared = MockData()
-    var index = 0
-    let contacts = [
+struct MockData {
+   static let contacts = [
         Contact(name: "Анастасия", surname: "Иванова", imageName: "person1", phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "yesterday", hasUnwatchedStories: false),
         Contact(name: "Петя", surname: nil,  imageName: "person2", phoneNumber: "+7 999 999-99-99", isOnline: true, lastSeen: "", hasUnwatchedStories: false),
         Contact(name: "Маман", surname: nil, imageName: "person3", phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "3 hours ago", hasUnwatchedStories: true),
