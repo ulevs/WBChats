@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct VerificationView: View {
     @State private var phoneNumber: String = ""
     @State private var isProcessing: Bool = false
@@ -17,67 +15,47 @@ struct VerificationView: View {
         VStack {
             Spacer()
             
-            Text("Введите номер телефона")
-                .font(.title)
-                .foregroundColor(.primary)
-                .padding(.bottom, 5)
+            HeadlineTitleView(title: "Enter your phone number")
+                .padding()
             
-            Text("Мы вышлем код подтверждения на указанный номер")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+            TextView(text: "We will send a confirmation code to the number provided")
                 .multilineTextAlignment(.center)
-                .padding(.bottom, 20)
+                .padding(.bottom, 40)
+                .lineSpacing(7)
+
             
             HStack {
-                Image(systemName: "flag.fill")
+                Image(systemName: "")
                     .resizable()
                     .frame(width: 24, height: 24)
-                    .foregroundColor(.blue)
                 
                 Text("+7")
-                    .foregroundColor(.primary)
+                    .foregroundStyle(.primary)
                 
                 TextField("000 000-00-00", text: $phoneNumber)
+                    .background(Color(.wbTintBG))
                     .keyboardType(.numberPad)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             .padding()
-            .background(Color(.systemGray6))
+            .background(Color(.wbTintBG))
             .cornerRadius(10)
             .padding(.horizontal)
             
+            Spacer()
+
             if isProcessing {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle(tint: .purple))
                     .scaleEffect(1.5)
                     .padding(.top, 20)
             } else {
-                Button(action: {
-                    withAnimation {
-                        isProcessing = true
-                    }
-                    // Simulate a network request or processing delay
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        // Handle post-processing here
-                        withAnimation {
-                            isProcessing = false
-                        }
-                    }
-                }) {
-                    Text("Продолжить")
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.purple)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                }
-                .padding(.top, 20)
+                ButtonWBView(title: "Continue", action: {})
             }
             
-            Spacer()
         }
         .padding()
+        .background(.wbBG)
     }
 }
 

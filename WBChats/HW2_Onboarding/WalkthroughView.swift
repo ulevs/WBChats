@@ -29,22 +29,22 @@ struct WalkthroughView: View {
 
             
             HStack(spacing: 0) {
-                TextButton(isPresented: $showPrivacyPolicy, title: "Политикой Конфиденциальности")
+                TextButton(isPresented: $showPrivacyPolicy, title: NSLocalizedString("the Privacy Policy", comment: ""))
                     .sheet(isPresented: $showPrivacyPolicy) {
                         PrivacyPolicyView()
                     }
                 
-                Text(" и ")
+                Text(" " + NSLocalizedString("and", comment: "") + " ")
                     .foregroundStyle(.gray)
                     .font(.system(size: 10))
                 
-                TextButton(isPresented: $showTermsOfUse, title: "Условиями Использования")
+                TextButton(isPresented: $showTermsOfUse, title: NSLocalizedString("Terms of Use", comment: ""))
                     .sheet(isPresented: $showTermsOfUse) {
                         TermsOfUseView()
                     }
             }
             
-            ButtonWBView(title: "Начать общаться", action: {})
+            ButtonWBView(title: "Start chatting", action: {})
         }
         .background(.wbBG)
     }

@@ -32,6 +32,7 @@ struct ProfileAccountView: View {
             
         }
         
+        
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
                         leading: Button(action: {

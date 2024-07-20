@@ -24,8 +24,9 @@ struct ContactsView: View {
                         }
                     }
                 }
+//                .background(.wbBG)
         }
-
+//        .background(.wbBG)
     }
 }
 
