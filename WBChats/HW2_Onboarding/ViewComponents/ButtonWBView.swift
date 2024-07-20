@@ -12,9 +12,10 @@ struct ButtonWBView: View {
     let action: ()->()
     var body: some View {
         Button(action:action) {
-            Text(title)
+            Text(NSLocalizedString(title, comment: ""))
                 .font(.system(size: 16))
                 .foregroundStyle(.white)
+                .bold()
                 .padding()
         .frame(maxWidth: .infinity)
         .background(.wbButton)

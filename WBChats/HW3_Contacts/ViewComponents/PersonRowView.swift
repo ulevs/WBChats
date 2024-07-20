@@ -15,10 +15,12 @@ struct PersonRowView: View {
             
             VStack(alignment: .leading) {
                 TextView(text: person.name + " " + (person.surname ?? ""))
+                    .fontWeight(.bold)
                 GrayTextView(text: person.isOnline ? "Online" : "Last seen \(person.lastSeen)")
             }
             Spacer()
         }
+        .background(.wbBG)
     }
 }
 

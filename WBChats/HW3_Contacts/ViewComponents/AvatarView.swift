@@ -64,7 +64,7 @@ struct StoryFrame: View {
                 .fill(LinearGradient(gradient: gradient, startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
                 .frame(width: 56, height: 56)
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white)
+                .fill(Color.wbBG)
                 .frame(width: 52, height: 52)
         }
     }

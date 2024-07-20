@@ -10,9 +10,9 @@ import SwiftUI
 struct TextView: View {
     let text: String
     var body: some View {
-        Text(text)
+        Text(NSLocalizedString(text, comment: ""))
             .font(.system(size: 14))
-            .fontWeight(.bold)
+//            .fontWeight(.bold)
             .foregroundStyle(.wbHeadlineFont)
 
     }

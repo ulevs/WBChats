@@ -25,7 +25,6 @@ struct ContactsView: View {
                     }
                 }
         }
-
     }
 }
 
