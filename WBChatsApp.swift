@@ -13,7 +13,7 @@ struct WBChatsApp: App {
         WindowGroup {
 //            CurrentScreenView()
 //            VerificationView()
-            WalkthroughView()
+//            WalkthroughView()
 //            VerificationCodeView()
         }
     }
