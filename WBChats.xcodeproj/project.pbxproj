@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AF74248B2C4AAF9000A5454F /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74248A2C4AAF9000A5454F /* VerificationView.swift */; };
-		AF74248E2C4C144900A5454F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74248D2C4C144900A5454F /* TestView.swift */; };
+		AF74248E2C4C144900A5454F /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74248D2C4C144900A5454F /* NumberView.swift */; };
+		AF84A4C72C57E90C00ED0B26 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A4C62C57E90C00ED0B26 /* AnimationView.swift */; };
+		AF84A4CA2C58197300ED0B26 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A4C92C58197300ED0B26 /* VerificationCodeView.swift */; };
 		AFA64D662C19DC8300737DC8 /* WBChatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D652C19DC8300737DC8 /* WBChatsApp.swift */; };
 		AFA64D682C19DC8300737DC8 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D672C19DC8300737DC8 /* WalkthroughView.swift */; };
 		AFA64D6A2C19DC8500737DC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA64D692C19DC8500737DC8 /* Assets.xcassets */; };
@@ -75,7 +77,9 @@
 
 /* Begin PBXFileReference section */
 		AF74248A2C4AAF9000A5454F /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
-		AF74248D2C4C144900A5454F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		AF74248D2C4C144900A5454F /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		AF84A4C62C57E90C00ED0B26 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		AF84A4C92C58197300ED0B26 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
 		AFA64D622C19DC8300737DC8 /* WBChats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBChats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA64D652C19DC8300737DC8 /* WBChatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBChatsApp.swift; sourceTree = "<group>"; };
 		AFA64D672C19DC8300737DC8 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
@@ -143,7 +147,6 @@
 			children = (
 				AF74248C2C4BE7C300A5454F /* ViewComponents */,
 				AF74248A2C4AAF9000A5454F /* VerificationView.swift */,
-				AF74248D2C4C144900A5454F /* TestView.swift */,
 			);
 			path = HW10_Verification;
 			sourceTree = "<group>";
@@ -151,8 +154,18 @@
 		AF74248C2C4BE7C300A5454F /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				AF74248D2C4C144900A5454F /* NumberView.swift */,
+				AF84A4C62C57E90C00ED0B26 /* AnimationView.swift */,
 			);
 			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		AF84A4C82C5818CE00ED0B26 /* HW11_VerificationCode */ = {
+			isa = PBXGroup;
+			children = (
+				AF84A4C92C58197300ED0B26 /* VerificationCodeView.swift */,
+			);
+			path = HW11_VerificationCode;
 			sourceTree = "<group>";
 		};
 		AFA64D592C19DC8300737DC8 = {
@@ -181,6 +194,7 @@
 		AFA64D642C19DC8300737DC8 /* WBChats */ = {
 			isa = PBXGroup;
 			children = (
+				AF84A4C82C5818CE00ED0B26 /* HW11_VerificationCode */,
 				AF7424872C4A9CBC00A5454F /* HW10_Verification */,
 				AFA64D7D2C1A10AC00737DC8 /* HW3_Contacts */,
 				AFA64D732C19DCBF00737DC8 /* HW2_Onboarding */,
@@ -418,7 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA64D682C19DC8300737DC8 /* WalkthroughView.swift in Sources */,
-				AF74248E2C4C144900A5454F /* TestView.swift in Sources */,
+				AF74248E2C4C144900A5454F /* NumberView.swift in Sources */,
 				AFA64D972C20D65500737DC8 /* MoreView.swift in Sources */,
 				AFC1D3E02C3F245300FF1DBB /* CalendarView.swift in Sources */,
 				AFA64D822C1A17E400737DC8 /* TextView.swift in Sources */,
@@ -434,9 +448,11 @@
 				AFA64D782C1A0DBD00737DC8 /* ButtonWBView.swift in Sources */,
 				AFA64D802C1A169B00737DC8 /* TitleView.swift in Sources */,
 				AF74248B2C4AAF9000A5454F /* VerificationView.swift in Sources */,
+				AF84A4C72C57E90C00ED0B26 /* AnimationView.swift in Sources */,
 				AFA64D762C1A0D9E00737DC8 /* HeadlineTitleView.swift in Sources */,
 				AFA64D862C1A200600737DC8 /* AvatarView.swift in Sources */,
 				AFC1D3D22C3EF24F00FF1DBB /* ChatIntent.swift in Sources */,
+				AF84A4CA2C58197300ED0B26 /* VerificationCodeView.swift in Sources */,
 				AFA64D8A2C1E318A00737DC8 /* ProfileAccountView.swift in Sources */,
 				AFA64D662C19DC8300737DC8 /* WBChatsApp.swift in Sources */,
 				AFC1D3E22C3F24BF00FF1DBB /* Language.swift in Sources */,

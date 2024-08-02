@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileAccountView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.presentationMode) var presentationMode
       
     let person: Contact
     var body: some View {
@@ -33,7 +33,7 @@ struct ProfileAccountView: View {
         }
         
         
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden()
         .navigationBarItems(
                         leading: Button(action: {
                             presentationMode.wrappedValue.dismiss()

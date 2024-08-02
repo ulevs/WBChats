@@ -14,6 +14,7 @@ struct WBChatsApp: App {
 //            CurrentScreenView()
 //            VerificationView()
             WalkthroughView()
+//            VerificationCodeView()
         }
     }
 }
