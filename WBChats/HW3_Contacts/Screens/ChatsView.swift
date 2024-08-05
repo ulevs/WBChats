@@ -12,6 +12,7 @@ struct ChatsView: View {
     
     var body: some View {
         Text("There will be chats here")
+            
     }
 }
 #Preview {

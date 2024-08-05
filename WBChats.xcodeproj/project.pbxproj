@@ -11,6 +11,8 @@
 		AF74248E2C4C144900A5454F /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74248D2C4C144900A5454F /* NumberView.swift */; };
 		AF84A4C72C57E90C00ED0B26 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A4C62C57E90C00ED0B26 /* AnimationView.swift */; };
 		AF84A4CA2C58197300ED0B26 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A4C92C58197300ED0B26 /* VerificationCodeView.swift */; };
+		AF84A4CD2C61115700ED0B26 /* VerificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A4CC2C61115700ED0B26 /* VerificationModel.swift */; };
+		AF84A4CF2C61120500ED0B26 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A4CE2C61120500ED0B26 /* CodeView.swift */; };
 		AFA64D662C19DC8300737DC8 /* WBChatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D652C19DC8300737DC8 /* WBChatsApp.swift */; };
 		AFA64D682C19DC8300737DC8 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D672C19DC8300737DC8 /* WalkthroughView.swift */; };
 		AFA64D6A2C19DC8500737DC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA64D692C19DC8500737DC8 /* Assets.xcassets */; };
@@ -80,6 +82,8 @@
 		AF74248D2C4C144900A5454F /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 		AF84A4C62C57E90C00ED0B26 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		AF84A4C92C58197300ED0B26 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
+		AF84A4CC2C61115700ED0B26 /* VerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationModel.swift; sourceTree = "<group>"; };
+		AF84A4CE2C61120500ED0B26 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		AFA64D622C19DC8300737DC8 /* WBChats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBChats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA64D652C19DC8300737DC8 /* WBChatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBChatsApp.swift; sourceTree = "<group>"; };
 		AFA64D672C19DC8300737DC8 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				AF74248D2C4C144900A5454F /* NumberView.swift */,
+				AF84A4CC2C61115700ED0B26 /* VerificationModel.swift */,
 				AF84A4C62C57E90C00ED0B26 /* AnimationView.swift */,
 			);
 			path = ViewComponents;
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				AF84A4C92C58197300ED0B26 /* VerificationCodeView.swift */,
+				AF84A4CE2C61120500ED0B26 /* CodeView.swift */,
 			);
 			path = HW11_VerificationCode;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				AFA64D9A2C20D72200737DC8 /* CurrentScreenView.swift in Sources */,
 				AFA64DA02C2320DE00737DC8 /* ContactModel.swift in Sources */,
 				AFA64D7A2C1A0E4D00737DC8 /* ModalPrivacyPolicyView.swift in Sources */,
+				AF84A4CD2C61115700ED0B26 /* VerificationModel.swift in Sources */,
 				AFA64D782C1A0DBD00737DC8 /* ButtonWBView.swift in Sources */,
 				AFA64D802C1A169B00737DC8 /* TitleView.swift in Sources */,
 				AF74248B2C4AAF9000A5454F /* VerificationView.swift in Sources */,
@@ -458,6 +465,7 @@
 				AFC1D3E22C3F24BF00FF1DBB /* Language.swift in Sources */,
 				AFA64D882C1DD31C00737DC8 /* ContactsView.swift in Sources */,
 				AFA64D7C2C1A0E6E00737DC8 /* ModalTermsOfUseView.swift in Sources */,
+				AF84A4CF2C61120500ED0B26 /* CodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

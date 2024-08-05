@@ -12,6 +12,7 @@ struct ContactsView: View {
     var body: some View {
         NavigationStack{
             ContactsRows()
+//                .navigationBarBackButtonHidden()
                 .searchable(text: $searchText)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -24,6 +25,7 @@ struct ContactsView: View {
                         }
                     }
                 }
+//                .background(Color(.wbBG))
         }
     }
 }

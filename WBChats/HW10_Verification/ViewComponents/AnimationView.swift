@@ -43,7 +43,7 @@ struct BallAnimation: View {
 //
 //import SwiftUI
 //
-//struct BallAnimation: View {
+//struct CrazyCatAnimation: View {
 //
 //    @State var y: CGFloat = 0
 //    @State var x: CGFloat = 0

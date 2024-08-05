@@ -21,6 +21,7 @@ struct ContactsRows: View {
             }
         }
         .listStyle(.plain)
+        .background(Color(.wbBG))
     }
 }
 #Preview {

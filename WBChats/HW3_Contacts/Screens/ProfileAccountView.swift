@@ -55,7 +55,9 @@ struct ProfileAccountView: View {
                             TitleView(title: "Профиль")
                         }
                     }
+        .background(Color(.wbBG))
     }
+    
 }
 
 #Preview {
