@@ -46,8 +46,6 @@
 		AFC1D3D22C3EF24F00FF1DBB /* ChatIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3D12C3EF24F00FF1DBB /* ChatIntent.swift */; };
 		AFC1D3D62C3EFA1600FF1DBB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFC1D3D82C3EFA1600FF1DBB /* Localizable.strings */; };
 		AFC1D3DB2C3EFD9500FF1DBB /* HW4_WidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3DA2C3EFD9500FF1DBB /* HW4_WidgetEntryView.swift */; };
-		AFC1D3E02C3F245300FF1DBB /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3DF2C3F245300FF1DBB /* CalendarView.swift */; };
-		AFC1D3E22C3F24BF00FF1DBB /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3E12C3F24BF00FF1DBB /* Language.swift */; };
 		AFC1D3E62C41983E00FF1DBB /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D9F2C2320DE00737DC8 /* ContactModel.swift */; };
 		AFC1D3E72C4198F400FF1DBB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D852C1A200600737DC8 /* AvatarView.swift */; };
 		AFC1D3E82C41991F00FF1DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA64D692C19DC8500737DC8 /* Assets.xcassets */; };
@@ -116,14 +114,10 @@
 		AFC1D3002C2749B900FF1DBB /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		AFC1D3022C2749BB00FF1DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFC1D3042C2749BB00FF1DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFC1D3292C319C7600FF1DBB /* HW5_Bank.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HW5_Bank.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		AFC1D32A2C3424FE00FF1DBB /* HW6_Factory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HW6_Factory.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AFC1D3D12C3EF24F00FF1DBB /* ChatIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatIntent.swift; sourceTree = "<group>"; };
 		AFC1D3D72C3EFA1600FF1DBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AFC1D3DA2C3EFD9500FF1DBB /* HW4_WidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW4_WidgetEntryView.swift; sourceTree = "<group>"; };
 		AFC1D3DD2C3F04E000FF1DBB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AFC1D3DF2C3F245300FF1DBB /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		AFC1D3E12C3F24BF00FF1DBB /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +171,7 @@
 		AFA64D592C19DC8300737DC8 = {
 			isa = PBXGroup;
 			children = (
-				AFC1D3DE2C3F237800FF1DBB /* HW7_Calendar */,
 				AFC1D3D32C3EF9BA00FF1DBB /* Localization */,
-				AFC1D32A2C3424FE00FF1DBB /* HW6_Factory.playground */,
-				AFC1D3292C319C7600FF1DBB /* HW5_Bank.playground */,
 				AFA64D642C19DC8300737DC8 /* WBChats */,
 				AFC1D2F92C2749B900FF1DBB /* HW4_Widget */,
 				AFC1D2F42C2749B900FF1DBB /* Frameworks */,
@@ -324,15 +315,6 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		AFC1D3DE2C3F237800FF1DBB /* HW7_Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				AFC1D3DF2C3F245300FF1DBB /* CalendarView.swift */,
-				AFC1D3E12C3F24BF00FF1DBB /* Language.swift */,
-			);
-			path = HW7_Calendar;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,7 +422,6 @@
 				AFA64D682C19DC8300737DC8 /* WalkthroughView.swift in Sources */,
 				AF74248E2C4C144900A5454F /* NumberView.swift in Sources */,
 				AFA64D972C20D65500737DC8 /* MoreView.swift in Sources */,
-				AFC1D3E02C3F245300FF1DBB /* CalendarView.swift in Sources */,
 				AFA64D822C1A17E400737DC8 /* TextView.swift in Sources */,
 				AFA64D932C20BF8200737DC8 /* DetailsAvatarView.swift in Sources */,
 				AFA64D8E2C1F6D5600737DC8 /* GrayTextView.swift in Sources */,
@@ -462,7 +443,6 @@
 				AF84A4CA2C58197300ED0B26 /* VerificationCodeView.swift in Sources */,
 				AFA64D8A2C1E318A00737DC8 /* ProfileAccountView.swift in Sources */,
 				AFA64D662C19DC8300737DC8 /* WBChatsApp.swift in Sources */,
-				AFC1D3E22C3F24BF00FF1DBB /* Language.swift in Sources */,
 				AFA64D882C1DD31C00737DC8 /* ContactsView.swift in Sources */,
 				AFA64D7C2C1A0E6E00737DC8 /* ModalTermsOfUseView.swift in Sources */,
 				AF84A4CF2C61120500ED0B26 /* CodeView.swift in Sources */,
