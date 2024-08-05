@@ -11,3 +11,7 @@ struct VerificationModel {
     var phoneNumber: String
     var code: String
 }
+
+struct MockDataVerification {
+    static let contact = VerificationModel(phoneNumber: "", code: "4444")
+}
