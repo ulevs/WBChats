@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UISystem
 
 struct CodeView: View {
     let code: String
@@ -18,7 +17,7 @@ struct CodeView: View {
         ZStack {
             HStack(spacing: 15) {
                 ForEach(Array(enteredCode), id: \.self) { digit in
-                    HeadlineTitleView(headlineFont: .wbHeadlineFont, title: String(digit))
+                    HeadlineTitleView(title: String(digit))
                 }
                 
                 ForEach(0..<(4 - enteredCode.count), id: \.self) { _ in

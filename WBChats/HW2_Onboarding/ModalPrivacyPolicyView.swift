@@ -6,15 +6,14 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct PrivacyPolicyView: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
             Spacer()
-            ButtonWBView(title: "Закрыть"){
-                self.presentationMode.wrappedValue.dismiss()
-            }
+            ButtonWBView(title: "Закрыть", action:  {self.presentationMode.wrappedValue.dismiss()}, buttonColor: .wbButton)
         }
         .background(.wbBG)
     }

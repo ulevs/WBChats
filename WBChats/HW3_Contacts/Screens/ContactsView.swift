@@ -6,17 +6,17 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct ContactsView: View {
     @State private var searchText = ""
     var body: some View {
         NavigationStack{
             ContactsRows()
-//                .navigationBarBackButtonHidden()
                 .searchable(text: $searchText)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        TitleView(title: "Контакты")
+                        TitleView(headlineFont: .wbHeadlineFont, title: "Контакты")
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {}) {
@@ -25,7 +25,6 @@ struct ContactsView: View {
                         }
                     }
                 }
-//                .background(Color(.wbBG))
         }
     }
 }

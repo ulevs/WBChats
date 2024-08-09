@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct ProfileAccountView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -13,19 +14,20 @@ struct ProfileAccountView: View {
     let person: Contact
     var body: some View {
         VStack {
-            DetailsAvatarView(person: person, radius: 200)
+            DetailsAvatarView(photo: person.imageName, radius: 200, tintColor: .wbTintBG, fontColor: .wbHeadlineFont)
+        
             
-            HeadlineTitleView(title: person.name + " " + (person.surname ?? ""))
+            HeadlineTitleView(headlineFont: .wbHeadlineFont, title: person.name + " " + (person.surname ?? ""))
                 .padding(.top, 20)
             Text(person.phoneNumber)
                 .font(.system(size: 16))
                 .foregroundStyle(.gray)
             
             HStack {
-                SocialButtonView(iconName: "twitter", action: {})
-                SocialButtonView(iconName: "instagram", action: {})
-                SocialButtonView(iconName: "linkedin", action: {})
-                SocialButtonView(iconName: "facebook", action: {})
+                SocialButtonView(iconName: "twitter", action: {}, buttonColor: .wbButton)
+                SocialButtonView(iconName: "instagram", action: {}, buttonColor: .wbButton)
+                SocialButtonView(iconName: "linkedin", action: {}, buttonColor: .wbButton)
+                SocialButtonView(iconName: "facebook", action: {}, buttonColor: .wbButton)
             }
             .padding(.top, 40)
             
@@ -52,7 +54,7 @@ struct ProfileAccountView: View {
         .navigationBarTitleDisplayMode(.automatic)
                     .toolbar {
                         ToolbarItem(placement: .principal) {
-                            TitleView(title: "Профиль")
+                            TitleView(headlineFont: .wbHeadlineFont, title: "Профиль")
                         }
                     }
         .background(Color(.wbBG))
