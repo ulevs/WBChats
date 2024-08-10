@@ -9,8 +9,8 @@ import SwiftUI
 import Foundation
 
 struct NumberView: View {
-    @Binding var contact: VerificationModel
-
+//    @Binding var contact: VerificationModel
+    @Binding var number: String
     var body: some View {
         HStack(spacing: 8) {
             Text("🇷🇺 +7")
@@ -20,24 +20,22 @@ struct NumberView: View {
                         .fill(Color.wbTintBG)
                 )
             
-            TextField("000 000-00-00", text: $contact.phoneNumber)
+            TextField("000 000-00-00", text: $number)
                 .keyboardType(.numberPad)
                 .padding(7)
                 .background(
                     RoundedRectangle(cornerRadius: 4)
                         .fill(Color.wbTintBG)
                 )
-                .onChange(of: contact.phoneNumber) { oldValue, newValue in
+                .onChange(of: number) { oldValue, newValue in
                     let formatted = formatPhoneNumber(newValue)
-                    if contact.phoneNumber != formatted {
-                        contact.phoneNumber = formatted
+                    if number != formatted {
+                        number = formatted
                     }
                 }
         }
-        .padding(8)
         .bold()
         .foregroundStyle(.gray)
-        .frame(width: 327, height: 36)
     }
 
     // Format the phone number input

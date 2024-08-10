@@ -7,13 +7,34 @@
 
 import SwiftUI
 
+//struct ContactsRows: View {
+//    
+//    var body: some View {
+//        List(MockData.shared.contacts) { contact in
+//            ZStack {
+//                PersonRowView(person: contact)
+//                
+//                NavigationLink(destination: ProfileAccountView(person: contact)
+//                ) { }
+//                .opacity(0)
+//                .padding(.vertical, 4)
+//            }
+//        }
+//        .listStyle(.plain)
+//        .background(Color(.wbBG))
+//    }
+//}
+//#Preview {
+//    ContactsRows()
+//}
+
+
 struct ContactsRows: View {
     
     var body: some View {
-        List(MockData.shared.contacts) { contact in
+        List(MockData.contacts) { contact in
             ZStack {
                 PersonRowView(person: contact)
-                
                 NavigationLink(destination: ProfileAccountView(person: contact)
                 ) { }
                 .opacity(0)
@@ -21,7 +42,6 @@ struct ContactsRows: View {
             }
         }
         .listStyle(.plain)
-        .background(Color(.wbBG))
     }
 }
 #Preview {

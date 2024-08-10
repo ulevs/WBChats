@@ -28,7 +28,8 @@ struct VerificationView: View {
                     .lineSpacing(7)
                 
 
-                NumberView(contact: $contact)
+                NumberView(number: $contact.phoneNumber)
+                    .frame(width: 327, height: 36)
 
                 Spacer()
 

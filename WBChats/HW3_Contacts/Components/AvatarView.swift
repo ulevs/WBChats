@@ -28,33 +28,49 @@ struct AvatarView: View {
 
 
 #Preview {
-    AvatarView(person: Contact(name: "Анастасия", surname: "Иванова", imageName: "person1", phoneNumber: "+7 999 999-99-99", isOnline: true, lastSeen: "yesterday", hasUnwatchedStories: true))
+    AvatarView(person: Contact(name: "Анастасия", surname: "Иванова", imageName: URL(string: "https://s3-alpha-sig.figma.com/img/dff3/9826/1c3f407d0c7ff3bc9e52078ef2bbe372?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LUaiVVLEjwv843DzzydwzrdNf-UA8vuFusn83sNlnt3yShNOs5PtE1tsxv1YteD9RTrkLoDr5PCLle7KXxEEAnMa3rRfkW6BpF2qlN51UN395U74sWBDwCzkZx-JDWfKNNlWVYPQCAROecDXuAMzidCwaPkVOuMQiyP2RrwQanIRKLngpxH3DLTkd~TCgiMphmV4RoijrPkqrOZIJtQIb-mx842kjy1exnF7UxCiWPTdNGxqtY5rF5tqwW9CC93DS38dJN3A1Mvvda4E~oCqvy~dPrWhJiD2kLnfVd5rcSv2YBRXt5vV0SEnUn0-5vtnNuwxysqjSqyvB4uLOsLtjQ__"), phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "yesterday", hasUnwatchedStories: false))
 }
-
-
 
 
 
 struct Avatar: View {
     let person: Contact
+    
     var body: some View {
-        switch person.imageName {
-        case "none":
-            ZStack {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.wbButton)
-                    .frame(width: 48, height: 48)
-                Text((String(person.name.first ?? " ") + String(person.surname?.first ?? " ")))
-                        .foregroundStyle(.white)
-                        .bold()
+        Group {
+            switch person.imageName {
+            case nil:
+                initialsAvatar
+            default:
+                imageAvatar
             }
-        default:
-            Image(person.imageName)
-                .frame(width: 48, height: 48)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
         }
     }
+    
+    private var initialsAvatar: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.wbButton)
+                .frame(width: 48, height: 48)
+            Text(initials)
+                .foregroundStyle(.white)
+                .bold()
+        }
+    }
+    
+    private var imageAvatar: some View {
+        AsyncImage(url: person.imageName, scale: 5)
+            .frame(width: 48, height: 48)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+    }
+    
+    private var initials: String {
+        let nameInitial = person.name.first.map { String($0) } ?? " "
+        let surnameInitial = person.surname.first.map { String($0) } ?? " "
+        return nameInitial + surnameInitial
+    }
 }
+
 
 struct StoryFrame: View {
     let gradient = Gradient(colors: [.wbStart,  .wbEnd])
