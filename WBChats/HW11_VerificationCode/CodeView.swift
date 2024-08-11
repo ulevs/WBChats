@@ -11,7 +11,7 @@ import UISystem
 struct CodeView: View {
     let code: String
     @Binding var enteredCode: String
-    @Binding var showNextScreen: Bool
+    @Binding var isFullScreenPresented: Bool
     @FocusState private var isTextFieldFocused: Bool
     
     var body: some View {
@@ -42,7 +42,7 @@ struct CodeView: View {
                         enteredCode = String(newValue.prefix(4))
                     }
                     if enteredCode.count == 4 && code == enteredCode {
-                        showNextScreen.toggle()
+                        isFullScreenPresented.toggle()
                     }
                     if enteredCode.count == 4 && code != enteredCode {
                         DispatchQueue.main.asyncAfter(deadline: .now()) {

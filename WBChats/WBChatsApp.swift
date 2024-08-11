@@ -11,10 +11,11 @@ import SwiftUI
 struct WBChatsApp: App {
     var body: some Scene {
         WindowGroup {
-            CurrentScreenView()
+//            CurrentScreenView()
 //            VerificationView()
-//            WalkthroughView()
+            WalkthroughView()
 //            VerificationCodeView()
+//            NewContactView()
         }
     }
 }

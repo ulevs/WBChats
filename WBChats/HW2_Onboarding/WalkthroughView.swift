@@ -12,49 +12,53 @@ struct WalkthroughView: View {
     @State private var showPrivacyPolicy = false
     @State private var showTermsOfUse = false
     @State private var showVerificationView = false
+    @State private var isFullScreenPresented = true
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                Image("walkthroughImage")
-                    .resizable()
-                    .frame(width: 262, height: 271)
-                    .padding(.top, 135)
-                
-                HeadlineTitleView(headlineFont: .wbHeadlineFont, title: "Communicate with friends and family easily")
-                    .padding(.top, 42)
-                
-                Spacer()
-                
-                Text(NSLocalizedString("By clicking continue I agree to", comment: ""))
-                    .font(.system(size: 10))
-                    .foregroundStyle(.gray)
-                
-                
-                HStack(spacing: 0) {
-                    TextButton(isPresented: $showPrivacyPolicy, title: NSLocalizedString("the Privacy Policy", comment: ""))
-                        .sheet(isPresented: $showPrivacyPolicy) {
-                            PrivacyPolicyView()
+        TabBarView()
+            .fullScreenCover(isPresented: $isFullScreenPresented, content: {
+                NavigationStack() {
+                    VStack {
+                        Image("walkthroughImage")
+                            .resizable()
+                            .frame(width: 262, height: 271)
+                            .padding(.top, 135)
+                        
+                        HeadlineTitleView(headlineFont: .wbHeadlineFont, title: "Communicate with friends and family easily")
+                            .padding(.top, 42)
+                        
+                        Spacer()
+                        
+                        Text(NSLocalizedString("By clicking continue I agree to", comment: ""))
+                            .font(.system(size: 10))
+                            .foregroundStyle(.gray)
+                        
+                        
+                        HStack(spacing: 0) {
+                            TextButton(isPresented: $showPrivacyPolicy, title: NSLocalizedString("the Privacy Policy", comment: ""))
+                                .sheet(isPresented: $showPrivacyPolicy) {
+                                    PrivacyPolicyView()
+                                }
+                            
+                            Text(" " + NSLocalizedString("and", comment: "") + " ")
+                                .foregroundStyle(.gray)
+                                .font(.system(size: 10))
+                            
+                            TextButton(isPresented: $showTermsOfUse, title: NSLocalizedString("Terms of Use", comment: ""))
+                                .sheet(isPresented: $showTermsOfUse) {
+                                    TermsOfUseView()
+                                }
                         }
-                    
-                    Text(" " + NSLocalizedString("and", comment: "") + " ")
-                        .foregroundStyle(.gray)
-                        .font(.system(size: 10))
-                    
-                    TextButton(isPresented: $showTermsOfUse, title: NSLocalizedString("Terms of Use", comment: ""))
-                        .sheet(isPresented: $showTermsOfUse) {
-                            TermsOfUseView()
-                        }
+                        
+                        ButtonWBView(title: "Start chatting", action: {showVerificationView.toggle()}, buttonColor: .wbButton)
+                    }
+                    //            .navigationBarTitleDisplayMode(.inline)
+                    .navigationDestination(isPresented: $showVerificationView, destination: {
+                        VerificationView(isFullScreenPresented: $isFullScreenPresented)
+                    })
+                    .background(.wbBG)
                 }
-                
-                ButtonWBView(title: "Start chatting", action: {showVerificationView.toggle()}, buttonColor: .wbButton)
-            }
-            .navigationDestination(isPresented: $showVerificationView, destination: {
-                VerificationView()
             })
-            .background(.wbBG)
-        }
-        
     }
 }
 

@@ -10,10 +10,12 @@ import UISystem
 
 struct VerificationCodeView: View {
     @Binding var contact: VerificationModel
-    @State private var showContactsView: Bool = false
+//    @Binding var isFullScreenPresente: Bool
+    @Binding var isFullScreenPresented: Bool
     @Environment(\.presentationMode) var presentationMode
     @State private var enteredCode: String = ""
     @FocusState private var isTextFieldFocused: Bool
+    
 
     var body: some View {
         VStack {
@@ -27,7 +29,7 @@ struct VerificationCodeView: View {
                 .padding(.bottom, 40)
                 .padding(.top, 7)
 
-            CodeView(code: contact.code, enteredCode: $enteredCode, showNextScreen: $showContactsView)
+            CodeView(code: contact.code, enteredCode: $enteredCode, isFullScreenPresented: $isFullScreenPresented)
                 .padding(.bottom, 20)
 
             Button(action: {
@@ -39,10 +41,8 @@ struct VerificationCodeView: View {
             .padding(.bottom, 50)
             Spacer()
         }
-        .navigationDestination(isPresented: $showContactsView) {
-            CurrentScreenView()
-        }
         .navigationBarBackButtonHidden()
+
         .navigationBarItems(
                         leading: Button(action: {
                             presentationMode.wrappedValue.dismiss()

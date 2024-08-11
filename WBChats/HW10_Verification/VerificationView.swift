@@ -10,11 +10,13 @@ import UISystem
 
 struct VerificationView: View {
     @State private var contact = VerificationModel(phoneNumber: "", code: "4444")
+    @Binding var isFullScreenPresented: Bool
+
     @State private var showVerificationCodeView: Bool = false
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
             VStack {
                 Spacer()
                 BallAnimation()
@@ -36,10 +38,10 @@ struct VerificationView: View {
                 ButtonWBView(title: "Continue", action: {
                     if contact.phoneNumber.count == 13 { showVerificationCodeView.toggle() }}, buttonColor: .wbButton)
             }
-            .navigationDestination(isPresented: $showVerificationCodeView) {
-                VerificationCodeView(contact: $contact)
-            }
             .navigationBarBackButtonHidden()
+            .navigationDestination(isPresented: $showVerificationCodeView) {
+                VerificationCodeView(contact: $contact, isFullScreenPresented: $isFullScreenPresented)
+            }
             .navigationBarItems(
                 leading: Button(action: {
                     presentationMode.wrappedValue.dismiss()
@@ -50,12 +52,12 @@ struct VerificationView: View {
                 })
             .padding()
             .background(Color(.wbBG))
-        }
+//        }
     }
 }
 
-struct VerificationView_Previews: PreviewProvider {
-    static var previews: some View {
-        VerificationView()
-    }
-}
+//struct VerificationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VerificationView()
+//    }
+//}

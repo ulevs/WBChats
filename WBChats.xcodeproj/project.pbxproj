@@ -27,7 +27,7 @@
 		AFA64D8A2C1E318A00737DC8 /* ProfileAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D892C1E318A00737DC8 /* ProfileAccountView.swift */; };
 		AFA64D952C20D64200737DC8 /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D942C20D64200737DC8 /* ChatsView.swift */; };
 		AFA64D972C20D65500737DC8 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D962C20D65500737DC8 /* MoreView.swift */; };
-		AFA64D9A2C20D72200737DC8 /* CurrentScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D992C20D72200737DC8 /* CurrentScreenView.swift */; };
+		AFA64D9A2C20D72200737DC8 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D992C20D72200737DC8 /* TabBarView.swift */; };
 		AFA64DA02C2320DE00737DC8 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA64D9F2C2320DE00737DC8 /* ContactModel.swift */; };
 		AFC1D3D22C3EF24F00FF1DBB /* ChatIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1D3D12C3EF24F00FF1DBB /* ChatIntent.swift */; };
 		AFC1D3D62C3EFA1600FF1DBB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFC1D3D82C3EFA1600FF1DBB /* Localizable.strings */; };
@@ -71,7 +71,7 @@
 		AFA64D892C1E318A00737DC8 /* ProfileAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountView.swift; sourceTree = "<group>"; };
 		AFA64D942C20D64200737DC8 /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
 		AFA64D962C20D65500737DC8 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
-		AFA64D992C20D72200737DC8 /* CurrentScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScreenView.swift; sourceTree = "<group>"; };
+		AFA64D992C20D72200737DC8 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		AFA64D9F2C2320DE00737DC8 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		AFC1D3D12C3EF24F00FF1DBB /* ChatIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatIntent.swift; sourceTree = "<group>"; };
 		AFC1D3D72C3EFA1600FF1DBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				AF84A4E82C65674900ED0B26 /* Components */,
-				AFA64D992C20D72200737DC8 /* CurrentScreenView.swift */,
+				AFA64D992C20D72200737DC8 /* TabBarView.swift */,
 				AFA64D982C20D67200737DC8 /* Screens */,
 			);
 			path = HW3_Contacts;
@@ -311,7 +311,7 @@
 				AF84A4EE2C65699100ED0B26 /* NumberView.swift in Sources */,
 				AFA64D972C20D65500737DC8 /* MoreView.swift in Sources */,
 				AFA64D952C20D64200737DC8 /* ChatsView.swift in Sources */,
-				AFA64D9A2C20D72200737DC8 /* CurrentScreenView.swift in Sources */,
+				AFA64D9A2C20D72200737DC8 /* TabBarView.swift in Sources */,
 				AFA64DA02C2320DE00737DC8 /* ContactModel.swift in Sources */,
 				AFA64D7A2C1A0E4D00737DC8 /* ModalPrivacyPolicyView.swift in Sources */,
 				AF84A4EA2C65676500ED0B26 /* ContactsRows.swift in Sources */,
