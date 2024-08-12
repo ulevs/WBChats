@@ -9,8 +9,8 @@ import SwiftUI
 import UISystem
 
 struct TabBarView: View {
-    @State private var addNewContact = false
-    @State private var searchText = ""
+//    @State private var addNewContact = false
+//    @State private var searchText = ""
     var body: some View {
 //        NavigationStack {
             TabView {
