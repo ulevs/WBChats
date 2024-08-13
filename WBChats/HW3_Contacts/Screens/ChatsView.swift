@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChatsView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         Text("There will be chats here")

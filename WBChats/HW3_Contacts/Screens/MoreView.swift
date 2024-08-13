@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoreView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         Text("Here is the rest of the information")

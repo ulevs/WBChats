@@ -17,7 +17,7 @@ struct ProfileAccountView: View {
             DetailsAvatarView(photo: person.imageName, radius: 200, tintColor: .wbTintBG, fontColor: .wbHeadlineFont)
         
             
-            HeadlineTitleView(headlineFont: .wbHeadlineFont, title: person.name + " " + (person.surname ?? ""))
+            HeadlineTitleView(headlineFont: .wbHeadlineFont, title: person.name + " " + (person.surname ))
                 .padding(.top, 20)
             Text(person.phoneNumber)
                 .font(.system(size: 16))
@@ -63,10 +63,9 @@ struct ProfileAccountView: View {
 }
 
 #Preview {
-    ProfileAccountView(person: Contact(name: "Анастасия", surname: "Иванова", imageName: "none", phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "yesterday", hasUnwatchedStories: false))
+    ProfileAccountView(person: Contact(name: "Анастасия", surname: "Иванова", imageName: URL(string: "https://s3-alpha-sig.figma.com/img/dff3/9826/1c3f407d0c7ff3bc9e52078ef2bbe372?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LUaiVVLEjwv843DzzydwzrdNf-UA8vuFusn83sNlnt3yShNOs5PtE1tsxv1YteD9RTrkLoDr5PCLle7KXxEEAnMa3rRfkW6BpF2qlN51UN395U74sWBDwCzkZx-JDWfKNNlWVYPQCAROecDXuAMzidCwaPkVOuMQiyP2RrwQanIRKLngpxH3DLTkd~TCgiMphmV4RoijrPkqrOZIJtQIb-mx842kjy1exnF7UxCiWPTdNGxqtY5rF5tqwW9CC93DS38dJN3A1Mvvda4E~oCqvy~dPrWhJiD2kLnfVd5rcSv2YBRXt5vV0SEnUn0-5vtnNuwxysqjSqyvB4uLOsLtjQ__"), phoneNumber: "+7 999 999-99-99", isOnline: false, lastSeen: "yesterday", hasUnwatchedStories: false))
+    
 }
-
-
 
 
 
