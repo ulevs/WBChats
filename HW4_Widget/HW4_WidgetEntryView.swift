@@ -16,7 +16,7 @@ struct HW4_WidgetEntryView : View {
     var body: some View {
         VStack {
             Text("Online now:")
-            Avatar(person: entry.contactShow[entry.index])
+            AvatarView(person: entry.contactShow[entry.index])
             Text(entry.contactShow[entry.index].name + " " + (entry.contactShow[entry.index].surname ) )
             
             Button(intent: ChangeContactIntent(index: entry.index + 1)) {
