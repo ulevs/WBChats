@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AF5313282C6AD6E100CE5356 /* AsyncImageLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313272C6AD6E100CE5356 /* AsyncImageLoad.swift */; };
-		AF53132A2C6AD92600CE5356 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313292C6AD92600CE5356 /* AsyncImageView.swift */; };
-		AF53132B2C6ADACA00CE5356 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313292C6AD92600CE5356 /* AsyncImageView.swift */; };
 		AF53132C2C6ADAD300CE5356 /* AsyncImageLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313272C6AD6E100CE5356 /* AsyncImageLoad.swift */; };
 		AF74248B2C4AAF9000A5454F /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74248A2C4AAF9000A5454F /* VerificationView.swift */; };
 		AF84A4CA2C58197300ED0B26 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A4C92C58197300ED0B26 /* VerificationCodeView.swift */; };
@@ -78,7 +76,6 @@
 
 /* Begin PBXFileReference section */
 		AF5313272C6AD6E100CE5356 /* AsyncImageLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoad.swift; sourceTree = "<group>"; };
-		AF5313292C6AD92600CE5356 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		AF74248A2C4AAF9000A5454F /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		AF84A4C92C58197300ED0B26 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
 		AF84A4CC2C61115700ED0B26 /* VerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationModel.swift; sourceTree = "<group>"; };
@@ -146,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				AF5313272C6AD6E100CE5356 /* AsyncImageLoad.swift */,
-				AF5313292C6AD92600CE5356 /* AsyncImageView.swift */,
 			);
 			path = HW15;
 			sourceTree = "<group>";
@@ -435,7 +431,6 @@
 				AF84A4EA2C65676500ED0B26 /* ContactsRows.swift in Sources */,
 				AF84A4CD2C61115700ED0B26 /* VerificationModel.swift in Sources */,
 				AF74248B2C4AAF9000A5454F /* VerificationView.swift in Sources */,
-				AF53132A2C6AD92600CE5356 /* AsyncImageView.swift in Sources */,
 				AFC1D3D22C3EF24F00FF1DBB /* ChatIntent.swift in Sources */,
 				AF84A4CA2C58197300ED0B26 /* VerificationCodeView.swift in Sources */,
 				AF5313282C6AD6E100CE5356 /* AsyncImageLoad.swift in Sources */,
@@ -460,7 +455,6 @@
 				AF84A4E32C63D2B100ED0B26 /* VerificationModel.swift in Sources */,
 				AFC1D3E62C41983E00FF1DBB /* ContactModel.swift in Sources */,
 				AFC1D3012C2749B900FF1DBB /* AppIntent.swift in Sources */,
-				AF53132B2C6ADACA00CE5356 /* AsyncImageView.swift in Sources */,
 				AF84A4F12C6583BC00ED0B26 /* AvatarView.swift in Sources */,
 				AFC1D2FD2C2749B900FF1DBB /* HW4_WidgetLiveActivity.swift in Sources */,
 				AF53132C2C6ADAD300CE5356 /* AsyncImageLoad.swift in Sources */,
